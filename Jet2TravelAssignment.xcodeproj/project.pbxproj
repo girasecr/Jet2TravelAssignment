@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		853BB4F62458833A00D2EEB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4F52458833A00D2EEB5 /* ArticleViewController.swift */; };
 		853BB4F82458861A00D2EEB5 /* ArticleTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4F72458861A00D2EEB5 /* ArticleTableviewCell.swift */; };
+		853BB4FA24589BD900D2EEB5 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4F924589BD900D2EEB5 /* ArticleViewModel.swift */; };
+		853BB4FD24589DFD00D2EEB5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4FC24589DFD00D2EEB5 /* RequestManager.swift */; };
+		853BB4FF24589E6100D2EEB5 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4FE24589E6100D2EEB5 /* APIConfiguration.swift */; };
+		853BB50224589ED000D2EEB5 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853BB50124589ED000D2EEB5 /* Reachability.framework */; };
+		853BB50324589ED000D2EEB5 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 853BB50124589ED000D2EEB5 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		853BB50724589F0D00D2EEB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50624589F0D00D2EEB5 /* Extensions.swift */; };
+		853BB50924589F1800D2EEB5 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50824589F1800D2EEB5 /* Enum.swift */; };
+		853BB50B24589F2E00D2EEB5 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50A24589F2E00D2EEB5 /* TypeAlias.swift */; };
+		853BB50D24589FBF00D2EEB5 /* ArticleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50C24589FBF00D2EEB5 /* ArticleDataModel.swift */; };
+		853BB50F2458BD3500D2EEB5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50E2458BD3500D2EEB5 /* Utility.swift */; };
 		8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FD245844A600303A84 /* AppDelegate.swift */; };
 		8574D900245844A600303A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FF245844A600303A84 /* SceneDelegate.swift */; };
 		8574D905245844A600303A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8574D903245844A600303A84 /* Main.storyboard */; };
@@ -36,9 +46,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		853BB50424589ED000D2EEB5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				853BB50324589ED000D2EEB5 /* Reachability.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		853BB4F52458833A00D2EEB5 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		853BB4F72458861A00D2EEB5 /* ArticleTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableviewCell.swift; sourceTree = "<group>"; };
+		853BB4F924589BD900D2EEB5 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		853BB4FC24589DFD00D2EEB5 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		853BB4FE24589E6100D2EEB5 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		853BB50124589ED000D2EEB5 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		853BB50624589F0D00D2EEB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		853BB50824589F1800D2EEB5 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		853BB50A24589F2E00D2EEB5 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		853BB50C24589FBF00D2EEB5 /* ArticleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataModel.swift; sourceTree = "<group>"; };
+		853BB50E2458BD3500D2EEB5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8574D8FA245844A600303A84 /* Jet2TravelAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jet2TravelAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8574D8FD245844A600303A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8574D8FF245844A600303A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853BB50224589ED000D2EEB5 /* Reachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +136,6 @@
 		853BB4F024587BD100D2EEB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8574D903245844A600303A84 /* Main.storyboard */,
 				853BB4F52458833A00D2EEB5 /* ArticleViewController.swift */,
 				853BB4F72458861A00D2EEB5 /* ArticleTableviewCell.swift */,
 			);
@@ -112,6 +145,7 @@
 		853BB4F124587BE500D2EEB5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				853BB4F924589BD900D2EEB5 /* ArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,17 +153,19 @@
 		853BB4F224587BED00D2EEB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				853BB50C24589FBF00D2EEB5 /* ArticleDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		853BB4F324587C0E00D2EEB5 /* Supporting Files */ = {
+		853BB4F324587C0E00D2EEB5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8574D90E245844A700303A84 /* Info.plist */,
 				8574D906245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld */,
 				8574D90B245844A700303A84 /* LaunchScreen.storyboard */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		853BB4F424587C4100D2EEB5 /* Images */ = {
@@ -140,6 +176,42 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		853BB4FB24589DDF00D2EEB5 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				853BB4FC24589DFD00D2EEB5 /* RequestManager.swift */,
+				853BB4FE24589E6100D2EEB5 /* APIConfiguration.swift */,
+			);
+			path = "Network Services";
+			sourceTree = "<group>";
+		};
+		853BB50024589ECF00D2EEB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				853BB50124589ED000D2EEB5 /* Reachability.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		853BB50524589EE300D2EEB5 /* Generic Classes */ = {
+			isa = PBXGroup;
+			children = (
+				853BB50624589F0D00D2EEB5 /* Extensions.swift */,
+				853BB50824589F1800D2EEB5 /* Enum.swift */,
+				853BB50A24589F2E00D2EEB5 /* TypeAlias.swift */,
+				853BB50E2458BD3500D2EEB5 /* Utility.swift */,
+			);
+			path = "Generic Classes";
+			sourceTree = "<group>";
+		};
+		853BB5102458BF5600D2EEB5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8574D903245844A600303A84 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		8574D8F1245844A600303A84 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +219,7 @@
 				8574D916245844A700303A84 /* Jet2TravelAssignmentTests */,
 				8574D921245844A700303A84 /* Jet2TravelAssignmentUITests */,
 				8574D8FB245844A600303A84 /* Products */,
+				853BB50024589ECF00D2EEB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,9 +238,11 @@
 			children = (
 				853BB4EE24587BAD00D2EEB5 /* AppDelegate */,
 				853BB4EF24587BBE00D2EEB5 /* AppModel */,
+				853BB5102458BF5600D2EEB5 /* Storyboard */,
+				853BB4FB24589DDF00D2EEB5 /* Network Services */,
+				853BB50524589EE300D2EEB5 /* Generic Classes */,
 				853BB4F424587C4100D2EEB5 /* Images */,
-				8574D90E245844A700303A84 /* Info.plist */,
-				853BB4F324587C0E00D2EEB5 /* Supporting Files */,
+				853BB4F324587C0E00D2EEB5 /* SupportingFiles */,
 			);
 			path = Jet2TravelAssignment;
 			sourceTree = "<group>";
@@ -200,6 +275,7 @@
 				8574D8F6245844A600303A84 /* Sources */,
 				8574D8F7245844A600303A84 /* Frameworks */,
 				8574D8F8245844A600303A84 /* Resources */,
+				853BB50424589ED000D2EEB5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,9 +398,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				853BB4F82458861A00D2EEB5 /* ArticleTableviewCell.swift in Sources */,
+				853BB50724589F0D00D2EEB5 /* Extensions.swift in Sources */,
 				8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */,
 				853BB4F62458833A00D2EEB5 /* ArticleViewController.swift in Sources */,
+				853BB50D24589FBF00D2EEB5 /* ArticleDataModel.swift in Sources */,
+				853BB4FF24589E6100D2EEB5 /* APIConfiguration.swift in Sources */,
+				853BB4FA24589BD900D2EEB5 /* ArticleViewModel.swift in Sources */,
+				853BB50F2458BD3500D2EEB5 /* Utility.swift in Sources */,
+				853BB4FD24589DFD00D2EEB5 /* RequestManager.swift in Sources */,
 				8574D900245844A600303A84 /* SceneDelegate.swift in Sources */,
+				853BB50924589F1800D2EEB5 /* Enum.swift in Sources */,
+				853BB50B24589F2E00D2EEB5 /* TypeAlias.swift in Sources */,
 				8574D908245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,7 +584,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJ5NRX3AXD;
-				INFOPLIST_FILE = Jet2TravelAssignment/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Jet2TravelAssignment/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,7 +606,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJ5NRX3AXD;
-				INFOPLIST_FILE = Jet2TravelAssignment/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Jet2TravelAssignment/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
