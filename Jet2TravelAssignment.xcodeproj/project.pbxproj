@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853BB4F62458833A00D2EEB5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4F52458833A00D2EEB5 /* ArticleViewController.swift */; };
+		853BB4F82458861A00D2EEB5 /* ArticleTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB4F72458861A00D2EEB5 /* ArticleTableviewCell.swift */; };
 		8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FD245844A600303A84 /* AppDelegate.swift */; };
 		8574D900245844A600303A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FF245844A600303A84 /* SceneDelegate.swift */; };
-		8574D902245844A600303A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D901245844A600303A84 /* ViewController.swift */; };
 		8574D905245844A600303A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8574D903245844A600303A84 /* Main.storyboard */; };
 		8574D908245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8574D906245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld */; };
 		8574D90A245844A700303A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8574D909245844A700303A84 /* Assets.xcassets */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		853BB4F52458833A00D2EEB5 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		853BB4F72458861A00D2EEB5 /* ArticleTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableviewCell.swift; sourceTree = "<group>"; };
 		8574D8FA245844A600303A84 /* Jet2TravelAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jet2TravelAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8574D8FD245844A600303A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8574D8FF245844A600303A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8574D901245844A600303A84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8574D904245844A600303A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8574D907245844A600303A84 /* Jet2TravelAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jet2TravelAssignment.xcdatamodel; sourceTree = "<group>"; };
 		8574D909245844A700303A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		853BB4EE24587BAD00D2EEB5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8574D8FD245844A600303A84 /* AppDelegate.swift */,
+				8574D8FF245844A600303A84 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		853BB4EF24587BBE00D2EEB5 /* AppModel */ = {
+			isa = PBXGroup;
+			children = (
+				853BB4F224587BED00D2EEB5 /* Model */,
+				853BB4F124587BE500D2EEB5 /* ViewModel */,
+				853BB4F024587BD100D2EEB5 /* View */,
+			);
+			path = AppModel;
+			sourceTree = "<group>";
+		};
+		853BB4F024587BD100D2EEB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8574D903245844A600303A84 /* Main.storyboard */,
+				853BB4F52458833A00D2EEB5 /* ArticleViewController.swift */,
+				853BB4F72458861A00D2EEB5 /* ArticleTableviewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		853BB4F124587BE500D2EEB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		853BB4F224587BED00D2EEB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		853BB4F324587C0E00D2EEB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8574D906245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld */,
+				8574D90B245844A700303A84 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		853BB4F424587C4100D2EEB5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8574D909245844A700303A84 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		8574D8F1245844A600303A84 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +163,11 @@
 		8574D8FC245844A600303A84 /* Jet2TravelAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				8574D8FD245844A600303A84 /* AppDelegate.swift */,
-				8574D8FF245844A600303A84 /* SceneDelegate.swift */,
-				8574D901245844A600303A84 /* ViewController.swift */,
-				8574D903245844A600303A84 /* Main.storyboard */,
-				8574D909245844A700303A84 /* Assets.xcassets */,
-				8574D90B245844A700303A84 /* LaunchScreen.storyboard */,
+				853BB4EE24587BAD00D2EEB5 /* AppDelegate */,
+				853BB4EF24587BBE00D2EEB5 /* AppModel */,
+				853BB4F424587C4100D2EEB5 /* Images */,
 				8574D90E245844A700303A84 /* Info.plist */,
-				8574D906245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld */,
+				853BB4F324587C0E00D2EEB5 /* Supporting Files */,
 			);
 			path = Jet2TravelAssignment;
 			sourceTree = "<group>";
@@ -262,8 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8574D902245844A600303A84 /* ViewController.swift in Sources */,
+				853BB4F82458861A00D2EEB5 /* ArticleTableviewCell.swift in Sources */,
 				8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */,
+				853BB4F62458833A00D2EEB5 /* ArticleViewController.swift in Sources */,
 				8574D900245844A600303A84 /* SceneDelegate.swift in Sources */,
 				8574D908245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld in Sources */,
 			);
