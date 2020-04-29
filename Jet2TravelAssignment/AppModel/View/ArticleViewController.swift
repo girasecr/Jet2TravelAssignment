@@ -10,14 +10,9 @@ import Foundation
 import UIKit
 
 class ArticleViewController: UIViewController {
-    // MARK: - Properties/Constants
-    struct CONSTANTS {
-        static let alertTitle = "No Internet Connection"
-        static let alertMsg = "Internet Connection is required fot this application to run properly"
-        static let alertButtonName = "Ok"
-    }
-    
+    // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableIndicatorView: UIActivityIndicatorView!
     var activityIndicatorView: UIActivityIndicatorView?
     var viewModel: ArticleViewModel?
     
@@ -35,6 +30,7 @@ class ArticleViewController: UIViewController {
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
         setupProcessIndicatorView()
+        stopAnimatingLoadMore()
     }
     
     private func setupProcessIndicatorView() {
@@ -58,10 +54,20 @@ class ArticleViewController: UIViewController {
             })
         }
     }
+    
+    private func startAnimatingLoadMore() {
+        self.tableIndicatorView.startAnimating()
+        self.tableIndicatorView.isHidden = false
+    }
+    
+    private func stopAnimatingLoadMore() {
+        self.tableIndicatorView.stopAnimating()
+        self.tableIndicatorView.isHidden = true
+    }
 }
 
 // MARK: - Delegate methods UITableViewDataSource, UITableViewDelegate
-extension ArticleViewController: UITableViewDataSource, UITableViewDelegate {
+extension ArticleViewController: UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.numberOfRows ?? 0
     }
@@ -80,6 +86,21 @@ extension ArticleViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let tableHeight = tableView.bounds.size.height
+        let contentHeight = tableView.contentSize.height
+        let insetHeight = tableView.contentInset.bottom
+        
+        let yOffset = tableView.contentOffset.y
+        let yOffsetAtBottom = yOffset + tableHeight - insetHeight
+        if (yOffsetAtBottom >= contentHeight) && (viewModel?.numberOfRows != viewModel?.articleArray.count) {
+            self.startAnimatingLoadMore()
+            viewModel?.numberOfRows += GLOBAL_CONSTANTS.loadMorePageSize
+            self.tableView.reloadData()
+            self.stopAnimatingLoadMore()
+        }
+    }
 }
 
 // MARK: - Reachability Delegate Methods
@@ -97,8 +118,8 @@ extension ArticleViewController: ReachabilityProtocol {
     }
     
     func showNeworkAlert() {
-        let alert = UIAlertController(title: CONSTANTS.alertTitle, message: CONSTANTS.alertMsg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: CONSTANTS.alertButtonName, style: .default, handler: nil))
+        let alert = UIAlertController(title: GLOBAL_CONSTANTS.alertTitle, message: GLOBAL_CONSTANTS.alertMsg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: GLOBAL_CONSTANTS.alertButtonName, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }

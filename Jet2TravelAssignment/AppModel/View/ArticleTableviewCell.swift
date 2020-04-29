@@ -59,7 +59,7 @@ class ArticleTableviewCell: UITableViewCell {
     private func decorateUIViews() {
         userImageView.layer.cornerRadius = userImageView.frame.size.height/2
         userImageView.clipsToBounds = true
-        articleImageView.layer.cornerRadius = CGFloat(FRAME_CONSTANTS.articleCornerRadius)
+        articleImageView.layer.cornerRadius = CGFloat(GLOBAL_CONSTANTS.articleCornerRadius)
         articleImageView.clipsToBounds = true
     }
     
@@ -80,7 +80,7 @@ class ArticleTableviewCell: UITableViewCell {
     private func bindMediaDetails(mediaData: [Media]) {
         if let media = mediaData.first {
             if let articleImageURL = URL(string: media.image) {
-                self.articleImageViewHeight.constant = CGFloat(FRAME_CONSTANTS.deafultImageViewHeight)
+                self.articleImageViewHeight.constant = CGFloat(GLOBAL_CONSTANTS.deafultImageViewHeight)
                 self.articleImageView.sd_setImage(with: articleImageURL, placeholderImage: UIImage(named: "defaultthumb"))
             }
         }

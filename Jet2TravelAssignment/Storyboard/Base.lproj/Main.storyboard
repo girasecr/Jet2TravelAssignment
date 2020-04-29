@@ -165,18 +165,28 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Gzc-uh-yH2"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="M5S-lb-vIs">
+                                <rect key="frame" x="197" y="822" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="HtH-6S-aoO"/>
+                                    <constraint firstAttribute="width" constant="20" id="WbF-SU-fMp"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M5S-lb-vIs" secondAttribute="bottom" constant="20" id="7Lx-KF-boP"/>
                             <constraint firstItem="MCw-ql-g8M" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f3P-9w-YS2"/>
                             <constraint firstItem="MCw-ql-g8M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m3M-LU-BE7"/>
                             <constraint firstItem="MCw-ql-g8M" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o3X-xg-8Wy"/>
+                            <constraint firstItem="M5S-lb-vIs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o6X-VP-u1j"/>
                             <constraint firstItem="MCw-ql-g8M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ujy-1O-HE0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Articles" id="nlS-NT-00g"/>
                     <connections>
+                        <outlet property="tableIndicatorView" destination="M5S-lb-vIs" id="MdN-0v-9mL"/>
                         <outlet property="tableView" destination="MCw-ql-g8M" id="RfM-lY-Mcq"/>
                     </connections>
                 </viewController>

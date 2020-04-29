@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Basic {
-    static let url = "https://5e99a9b1bc561b0016af3540.mockapi.io/jet2/api/v1/blogs?page=1&limit=20"
+    static let url = "https://5e99a9b1bc561b0016af3540.mockapi.io/jet2/api/v1/blogs?page=1&limit=50"
     static var timeout = 60.0
 }
 

@@ -20,7 +20,11 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
 }
 
-struct FRAME_CONSTANTS {
+struct GLOBAL_CONSTANTS {
     static let articleCornerRadius = 5.0
     static let deafultImageViewHeight = 200
+    static let loadMorePageSize = 10
+    static let alertTitle = "No Internet Connection"
+    static let alertMsg = "Internet Connection is required fot this application to run properly"
+    static let alertButtonName = "Ok"
 }

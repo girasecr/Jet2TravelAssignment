@@ -38,7 +38,7 @@ class ArticleViewModel {
     
     private func preparedTableCellCount() {
         self.articleArray = self.dataModel?.articles ?? []
-        self.numberOfRows =  self.articleArray.count
+        self.numberOfRows = GLOBAL_CONSTANTS.loadMorePageSize
     }
     
     func getApiData(complete:@escaping (ArticleDataModel?) -> Void) {
