@@ -54,12 +54,21 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Username&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-HP-hsE">
-                                                            <rect key="frame" x="70" y="2" width="320" height="21"/>
+                                                            <rect key="frame" x="70" y="2" width="290" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="gFo-kH-cmw"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                             <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcj-79-L9D">
+                                                            <rect key="frame" x="364" y="0.0" width="26" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="4kI-LD-zjY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;User Designation&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ny-wb-0He">
@@ -78,11 +87,13 @@
                                                         <constraint firstItem="XfK-HP-hsE" firstAttribute="top" secondItem="FAU-3g-0my" secondAttribute="top" constant="2" id="RNj-VW-hXk"/>
                                                         <constraint firstAttribute="bottom" secondItem="DdU-hA-gI1" secondAttribute="bottom" id="RVd-Cu-8jE"/>
                                                         <constraint firstAttribute="height" constant="60" id="Sbi-uF-gm7"/>
-                                                        <constraint firstAttribute="trailing" secondItem="XfK-HP-hsE" secondAttribute="trailing" id="Tvu-dD-4tP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XfK-HP-hsE" secondAttribute="trailing" constant="30" id="Tvu-dD-4tP"/>
                                                         <constraint firstItem="7ny-wb-0He" firstAttribute="top" secondItem="XfK-HP-hsE" secondAttribute="bottom" constant="9" id="Y8n-ur-q4k"/>
                                                         <constraint firstItem="XfK-HP-hsE" firstAttribute="leading" secondItem="DdU-hA-gI1" secondAttribute="trailing" constant="10" id="e20-lD-0b1"/>
+                                                        <constraint firstItem="Dcj-79-L9D" firstAttribute="top" secondItem="FAU-3g-0my" secondAttribute="top" id="hzP-10-MLb"/>
                                                         <constraint firstItem="7ny-wb-0He" firstAttribute="leading" secondItem="DdU-hA-gI1" secondAttribute="trailing" constant="10" id="jiL-M9-6hN"/>
                                                         <constraint firstAttribute="bottom" secondItem="7ny-wb-0He" secondAttribute="bottom" constant="8.5" id="pgZ-w5-Owi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Dcj-79-L9D" secondAttribute="trailing" id="rOD-x8-q2P"/>
                                                         <constraint firstItem="DdU-hA-gI1" firstAttribute="top" secondItem="FAU-3g-0my" secondAttribute="top" id="v9t-Ew-Q5a"/>
                                                         <constraint firstAttribute="trailing" secondItem="7ny-wb-0He" secondAttribute="trailing" id="yNf-x9-Ger"/>
                                                     </constraints>
@@ -141,6 +152,7 @@
                                             <outlet property="articleImageView" destination="Hdd-3l-uQp" id="VOT-Xk-dxA"/>
                                             <outlet property="articleImageViewHeight" destination="nBa-ka-j9g" id="BFy-dc-zgU"/>
                                             <outlet property="commentsCountLbl" destination="xfl-eW-2Bw" id="DX6-Nt-QDI"/>
+                                            <outlet property="dateTimeLbl" destination="Dcj-79-L9D" id="IXl-YN-kmi"/>
                                             <outlet property="likeCountLbl" destination="RhV-pM-B45" id="eWx-XT-gvR"/>
                                             <outlet property="userDesignationLbl" destination="7ny-wb-0He" id="ovw-81-nGz"/>
                                             <outlet property="userImageView" destination="DdU-hA-gI1" id="POq-HY-AiS"/>

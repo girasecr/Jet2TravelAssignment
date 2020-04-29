@@ -17,9 +17,13 @@ extension Encodable {
 extension Double {
     func truncate(places: Int) -> Double {
         let multiplier = pow(10, Double(places))
-        let newDecimal = multiplier * self // move the decimal right
-        let truncated = Double(Int(newDecimal)) // drop the fraction
-        let originalDecimal = truncated / multiplier // move the decimal back
+        let newDecimal = multiplier * self
+        let truncated = Double(Int(newDecimal))
+        let originalDecimal = truncated / multiplier
         return originalDecimal
     }
+}
+
+extension Date {
+    var hour: Int { return Calendar.autoupdatingCurrent.component(.hour, from: self) }
 }

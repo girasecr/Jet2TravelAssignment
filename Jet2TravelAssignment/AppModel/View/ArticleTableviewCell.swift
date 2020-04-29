@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class ArticleTableviewCell: UITableViewCell {
     // MARK: - Properties/Constants
@@ -20,6 +21,7 @@ class ArticleTableviewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userDesignationLbl: UILabel!
+    @IBOutlet weak var dateTimeLbl: UILabel!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var articleDescLbl: UILabel!
     @IBOutlet weak var likeCountLbl: UILabel!
@@ -36,9 +38,10 @@ class ArticleTableviewCell: UITableViewCell {
             self.bindMediaDetails(mediaData: articleItem.media)
             //Content/Likes/Comments binding
             self.articleDescLbl.text = articleItem.content
-            
             self.likeCountLbl.text = formatNumber(articleItem.likes) + " " + CONSTANTS.likes
             self.commentsCountLbl.text = formatNumber(articleItem.comments) + " " + CONSTANTS.comments
+            //Date Time Details binding
+            self.bindDatetimeDetails(dateValue: articleItem.createdAt)
         }
     }
     
@@ -66,13 +69,7 @@ class ArticleTableviewCell: UITableViewCell {
             self.userDesignationLbl.text = user.designation
             
             if let userAvtar = URL(string: user.avatar) {
-                DispatchQueue.global().async {
-                    if let data = try? Data(contentsOf: userAvtar) {
-                        DispatchQueue.main.async {
-                            self.userImageView.image = UIImage(data: data)
-                        }
-                    }
-                }
+                self.userImageView.sd_setImage(with: userAvtar, completed: nil)
             }
             else {
                 self.userImageView.image = nil
@@ -82,20 +79,21 @@ class ArticleTableviewCell: UITableViewCell {
     
     private func bindMediaDetails(mediaData: [Media]) {
         if let media = mediaData.first {
-            if let articleImage = URL(string: media.image) {
+            if let articleImageURL = URL(string: media.image) {
                 self.articleImageViewHeight.constant = CGFloat(FRAME_CONSTANTS.deafultImageViewHeight)
-                DispatchQueue.global().async {
-                    if let data = try? Data(contentsOf: articleImage) {
-                        DispatchQueue.main.async {
-                            self.articleImageView.image = UIImage(data: data)
-                        }
-                    }
-                }
+                self.articleImageView.sd_setImage(with: articleImageURL, placeholderImage: UIImage(named: "defaultthumb"))
             }
         }
         else {
             self.articleImageView.image = nil
             self.articleImageViewHeight.constant = 0
+        }
+    }
+    
+    private func bindDatetimeDetails(dateValue: String) {
+        if let date = getDateFrom(dateString: dateValue) {
+            let dateTime = getTimeBetween(date, end: Date())
+            self.dateTimeLbl.text = dateTime ?? ""
         }
     }
 }
