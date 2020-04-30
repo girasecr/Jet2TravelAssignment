@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 class ArticleViewController: UIViewController {
-    // MARK: - Properties
+    // MARK: - Properties/Constants
+    struct CONSTANTS {
+        static let tableAccessibilityIdentifier = "table--dataTableView"
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableIndicatorView: UIActivityIndicatorView!
     var activityIndicatorView: UIActivityIndicatorView?
@@ -29,6 +33,7 @@ class ArticleViewController: UIViewController {
         tableView.delegate = self
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
+        tableView.accessibilityIdentifier = CONSTANTS.tableAccessibilityIdentifier
         setupProcessIndicatorView()
         stopAnimatingLoadMore()
     }
@@ -94,9 +99,19 @@ extension ArticleViewController: UITableViewDataSource, UITableViewDelegate, UIS
         
         let yOffset = tableView.contentOffset.y
         let yOffsetAtBottom = yOffset + tableHeight - insetHeight
-        if (yOffsetAtBottom >= contentHeight) && (viewModel?.numberOfRows != viewModel?.articleArray.count) {
+        let rowsCount = viewModel?.numberOfRows ?? 0
+        let totalArticleCount = viewModel?.articleArray.count ?? 0
+        if (yOffsetAtBottom >= contentHeight) && (rowsCount != totalArticleCount) {
             self.startAnimatingLoadMore()
-            viewModel?.numberOfRows += GLOBAL_CONSTANTS.loadMorePageSize
+            let pageCount = totalArticleCount - rowsCount
+            
+            if pageCount >= GLOBAL_CONSTANTS.loadMorePageSize {
+                viewModel?.numberOfRows += GLOBAL_CONSTANTS.loadMorePageSize
+            }
+            else {
+                viewModel?.numberOfRows += pageCount
+            }
+            
             self.tableView.reloadData()
             self.stopAnimatingLoadMore()
         }

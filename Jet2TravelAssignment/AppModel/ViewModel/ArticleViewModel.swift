@@ -16,11 +16,11 @@ protocol ReachabilityProtocol: NSObjectProtocol {
 
 class ArticleViewModel {
     // MARK: - Properties
-    var dataModel: ArticleDataModel?
+    var dataModel: [Article]?
     let reachability = try? Reachability()
     weak var reachabilityDelegate: ReachabilityProtocol?
     var updateUI: () -> Void = { }
-    var numberOfRows = 0
+    var numberOfRows: Int = 0
     var articleArray: [Article] = []
     
     init() {
@@ -30,24 +30,27 @@ class ArticleViewModel {
     // MARK: - Required Methods
     func loadApiData() {
         self.getApiData(complete: { [weak self] (dataModel) in
-            self?.dataModel = dataModel
-            self?.preparedTableCellCount()
-            self?.updateUI()
+            self?.prepareData()
         })
     }
     
-    private func preparedTableCellCount() {
-        self.articleArray = self.dataModel?.articles ?? []
-        self.numberOfRows = GLOBAL_CONSTANTS.loadMorePageSize
+    private func prepareData() {
+        self.dataModel = ArticleCoreData.fetchFromStorage()
+        self.preparedTableCellCount()
+        self.updateUI()
     }
     
-    func getApiData(complete:@escaping (ArticleDataModel?) -> Void) {
+    private func preparedTableCellCount() {
+        self.articleArray = self.dataModel ?? []
+        self.numberOfRows = self.articleArray.count > 0 ? GLOBAL_CONSTANTS.loadMorePageSize : 0
+    }
+    
+    func getApiData(complete:@escaping ([Article]?) -> Void) {
         let apiConfiguration = APIConfiguration(httpMethod: .get)
         RequestManager.sharedInstance.withGet(apiConfiguration: apiConfiguration) { json, _ in
             if let response = json {
                 let jsonData = response.data(using: .utf8)!
-                let articlesData = try? JSONDecoder().decode([Article].self, from: jsonData)
-                let articleDataModel = ArticleDataModel(articles: articlesData ?? [])
+                let articleDataModel = ArticleCoreData.insertIntoCoreData(data: jsonData)
                 complete(articleDataModel)
             } else {
                 complete(nil)

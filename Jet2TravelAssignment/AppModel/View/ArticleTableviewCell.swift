@@ -30,18 +30,25 @@ class ArticleTableviewCell: UITableViewCell {
     
     var article: Article? {
         didSet {
-            guard let articleItem = article else {return}
+            guard let articleItem: Article = article else {return}
             
             //User data binding
-            self.bindUserDetails(users: articleItem.user)
-            //Media data binding
-            self.bindMediaDetails(mediaData: articleItem.media)
+            if let userSet: Set<User> = articleItem.user {
+                let user: [User] = Array(userSet)
+                self.bindUserDetails(users: user)
+            }
+            
+            if let mediaSet: Set<Media> = articleItem.media {
+                //Media data binding
+                let media: [Media] = Array(mediaSet)
+                self.bindMediaDetails(mediaData: media)
+            }
             //Content/Likes/Comments binding
             self.articleDescLbl.text = articleItem.content
-            self.likeCountLbl.text = formatNumber(articleItem.likes) + " " + CONSTANTS.likes
-            self.commentsCountLbl.text = formatNumber(articleItem.comments) + " " + CONSTANTS.comments
+            self.likeCountLbl.text = formatNumber(articleItem.likes?.intValue ?? 0) + " " + CONSTANTS.likes
+            self.commentsCountLbl.text = formatNumber(articleItem.comments?.intValue ?? 0) + " " + CONSTANTS.comments
             //Date Time Details binding
-            self.bindDatetimeDetails(dateValue: articleItem.createdAt)
+            self.bindDatetimeDetails(dateValue: articleItem.createdAt ?? "")
         }
     }
     
@@ -68,7 +75,7 @@ class ArticleTableviewCell: UITableViewCell {
             self.userName.text = user.name
             self.userDesignationLbl.text = user.designation
             
-            if let userAvtar = URL(string: user.avatar) {
+            if let userAvtar = URL(string: user.avatar ?? "") {
                 self.userImageView.sd_setImage(with: userAvtar, completed: nil)
             }
             else {
@@ -79,7 +86,7 @@ class ArticleTableviewCell: UITableViewCell {
     
     private func bindMediaDetails(mediaData: [Media]) {
         if let media = mediaData.first {
-            if let articleImageURL = URL(string: media.image) {
+            if let articleImageURL = URL(string: media.image ?? "") {
                 self.articleImageViewHeight.constant = CGFloat(GLOBAL_CONSTANTS.deafultImageViewHeight)
                 self.articleImageView.sd_setImage(with: articleImageURL, placeholderImage: UIImage(named: "defaultthumb"))
             }

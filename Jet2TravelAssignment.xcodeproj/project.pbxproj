@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		853BB50724589F0D00D2EEB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50624589F0D00D2EEB5 /* Extensions.swift */; };
 		853BB50924589F1800D2EEB5 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50824589F1800D2EEB5 /* Enum.swift */; };
 		853BB50B24589F2E00D2EEB5 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50A24589F2E00D2EEB5 /* TypeAlias.swift */; };
-		853BB50D24589FBF00D2EEB5 /* ArticleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50C24589FBF00D2EEB5 /* ArticleDataModel.swift */; };
 		853BB50F2458BD3500D2EEB5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50E2458BD3500D2EEB5 /* Utility.swift */; };
 		8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FD245844A600303A84 /* AppDelegate.swift */; };
 		8574D900245844A600303A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FF245844A600303A84 /* SceneDelegate.swift */; };
@@ -26,8 +25,16 @@
 		8574D908245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8574D906245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld */; };
 		8574D90A245844A700303A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8574D909245844A700303A84 /* Assets.xcassets */; };
 		8574D90D245844A700303A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8574D90B245844A700303A84 /* LaunchScreen.storyboard */; };
-		8574D918245844A700303A84 /* Jet2TravelAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D917245844A700303A84 /* Jet2TravelAssignmentTests.swift */; };
 		8574D923245844A700303A84 /* Jet2TravelAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D922245844A700303A84 /* Jet2TravelAssignmentUITests.swift */; };
+		85C943C0245AC33C00904800 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943BF245AC33C00904800 /* Article.swift */; };
+		85C943C2245AC36700904800 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943C1245AC36700904800 /* Media.swift */; };
+		85C943C4245AC37500904800 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943C3245AC37500904800 /* User.swift */; };
+		85C943C6245AC3BD00904800 /* Article+CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943C5245AC3BD00904800 /* Article+CoreDataModel.swift */; };
+		85C943C8245AC7B600904800 /* Jet2TravelAssignmentBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943C7245AC7B600904800 /* Jet2TravelAssignmentBaseTests.swift */; };
+		85C943CB245AC85100904800 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C943CA245AC85100904800 /* TestData.json */; };
+		85C943CD245ACA0200904800 /* ArticleTableviewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943CC245ACA0200904800 /* ArticleTableviewCellTests.swift */; };
+		85C943CF245ACB3500904800 /* ArticleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943CE245ACB3500904800 /* ArticleViewModelTests.swift */; };
+		85C943D1245ACC1700904800 /* ArticleViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C943D0245ACC1700904800 /* ArticleViewControllerUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +80,6 @@
 		853BB50624589F0D00D2EEB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		853BB50824589F1800D2EEB5 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		853BB50A24589F2E00D2EEB5 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
-		853BB50C24589FBF00D2EEB5 /* ArticleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataModel.swift; sourceTree = "<group>"; };
 		853BB50E2458BD3500D2EEB5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8574D8FA245844A600303A84 /* Jet2TravelAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jet2TravelAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8574D8FD245844A600303A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,11 +90,19 @@
 		8574D90C245844A700303A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8574D90E245844A700303A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8574D913245844A700303A84 /* Jet2TravelAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jet2TravelAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8574D917245844A700303A84 /* Jet2TravelAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jet2TravelAssignmentTests.swift; sourceTree = "<group>"; };
 		8574D919245844A700303A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8574D91E245844A700303A84 /* Jet2TravelAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jet2TravelAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8574D922245844A700303A84 /* Jet2TravelAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jet2TravelAssignmentUITests.swift; sourceTree = "<group>"; };
 		8574D924245844A700303A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C943BF245AC33C00904800 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		85C943C1245AC36700904800 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		85C943C3245AC37500904800 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		85C943C5245AC3BD00904800 /* Article+CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataModel.swift"; sourceTree = "<group>"; };
+		85C943C7245AC7B600904800 /* Jet2TravelAssignmentBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jet2TravelAssignmentBaseTests.swift; sourceTree = "<group>"; };
+		85C943CA245AC85100904800 /* TestData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
+		85C943CC245ACA0200904800 /* ArticleTableviewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableviewCellTests.swift; sourceTree = "<group>"; };
+		85C943CE245ACB3500904800 /* ArticleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModelTests.swift; sourceTree = "<group>"; };
+		85C943D0245ACC1700904800 /* ArticleViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		A8CE18869484FAF06ED7FC0E /* Pods-Jet2TravelAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jet2TravelAssignment.release.xcconfig"; path = "Target Support Files/Pods-Jet2TravelAssignment/Pods-Jet2TravelAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +172,10 @@
 		853BB4F224587BED00D2EEB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				853BB50C24589FBF00D2EEB5 /* ArticleDataModel.swift */,
+				85C943BF245AC33C00904800 /* Article.swift */,
+				85C943C1245AC36700904800 /* Media.swift */,
+				85C943C3245AC37500904800 /* User.swift */,
+				85C943C5245AC3BD00904800 /* Article+CoreDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,7 +274,11 @@
 		8574D916245844A700303A84 /* Jet2TravelAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				8574D917245844A700303A84 /* Jet2TravelAssignmentTests.swift */,
+				85C943C9245AC82F00904800 /* Test Assets */,
+				85C943C7245AC7B600904800 /* Jet2TravelAssignmentBaseTests.swift */,
+				85C943CE245ACB3500904800 /* ArticleViewModelTests.swift */,
+				85C943CC245ACA0200904800 /* ArticleTableviewCellTests.swift */,
+				85C943D0245ACC1700904800 /* ArticleViewControllerUnitTests.swift */,
 				8574D919245844A700303A84 /* Info.plist */,
 			);
 			path = Jet2TravelAssignmentTests;
@@ -272,13 +293,20 @@
 			path = Jet2TravelAssignmentUITests;
 			sourceTree = "<group>";
 		};
+		85C943C9245AC82F00904800 /* Test Assets */ = {
+			isa = PBXGroup;
+			children = (
+				85C943CA245AC85100904800 /* TestData.json */,
+			);
+			path = "Test Assets";
+			sourceTree = "<group>";
+		};
 		ADBBA1BFEFF05A663DC7DF6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				1979A86EC871731843802AAB /* Pods-Jet2TravelAssignment.debug.xcconfig */,
 				A8CE18869484FAF06ED7FC0E /* Pods-Jet2TravelAssignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -399,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C943CB245AC85100904800 /* TestData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,13 +487,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C943C0245AC33C00904800 /* Article.swift in Sources */,
 				853BB4F82458861A00D2EEB5 /* ArticleTableviewCell.swift in Sources */,
+				85C943C2245AC36700904800 /* Media.swift in Sources */,
 				853BB50724589F0D00D2EEB5 /* Extensions.swift in Sources */,
 				8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */,
 				853BB4F62458833A00D2EEB5 /* ArticleViewController.swift in Sources */,
-				853BB50D24589FBF00D2EEB5 /* ArticleDataModel.swift in Sources */,
 				853BB4FF24589E6100D2EEB5 /* APIConfiguration.swift in Sources */,
 				853BB4FA24589BD900D2EEB5 /* ArticleViewModel.swift in Sources */,
+				85C943C4245AC37500904800 /* User.swift in Sources */,
+				85C943C6245AC3BD00904800 /* Article+CoreDataModel.swift in Sources */,
 				853BB50F2458BD3500D2EEB5 /* Utility.swift in Sources */,
 				853BB4FD24589DFD00D2EEB5 /* RequestManager.swift in Sources */,
 				8574D900245844A600303A84 /* SceneDelegate.swift in Sources */,
@@ -478,7 +510,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8574D918245844A700303A84 /* Jet2TravelAssignmentTests.swift in Sources */,
+				85C943CD245ACA0200904800 /* ArticleTableviewCellTests.swift in Sources */,
+				85C943D1245ACC1700904800 /* ArticleViewControllerUnitTests.swift in Sources */,
+				85C943C8245AC7B600904800 /* Jet2TravelAssignmentBaseTests.swift in Sources */,
+				85C943CF245ACB3500904800 /* ArticleViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +686,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Jet2TravelAssignment/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,6 +710,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Jet2TravelAssignment/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
