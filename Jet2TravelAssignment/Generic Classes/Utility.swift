@@ -29,7 +29,6 @@ public func formatNumber(_ n: Int) -> String {
         return "\(n)"
     default:
         return "\(sign)\(n)"
-        
     }
 }
 

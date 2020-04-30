@@ -47,7 +47,6 @@ class Article: NSManagedObject, Codable {
         self.likes = try container.decodeIfPresent(Int.self, forKey: .likes) as NSNumber?
         self.media = try container.decodeIfPresent(Set<Media>.self, forKey: .media)
         self.user = try container.decodeIfPresent(Set<User>.self, forKey: .user)
-        
     }
     
     // MARK: - Encodable

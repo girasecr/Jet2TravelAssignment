@@ -14,7 +14,7 @@ class RequestManager {
     
     private init() {
     }
-
+    
     func withGet(apiConfiguration: APIConfiguration, completionHandler: @escaping JSONCompletionHandler) {
         let configuration = apiConfiguration.configuration()
         let session = URLSession(configuration: configuration)

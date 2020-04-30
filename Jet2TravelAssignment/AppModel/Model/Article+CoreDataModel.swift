@@ -29,7 +29,6 @@ class ArticleCoreData {
         }
     }
     
-    
     static func fetchFromStorage() -> [Article]? {
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Article>(entityName: "Article")
