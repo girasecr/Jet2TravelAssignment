@@ -20,7 +20,6 @@
 		853BB50B24589F2E00D2EEB5 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50A24589F2E00D2EEB5 /* TypeAlias.swift */; };
 		853BB50F2458BD3500D2EEB5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BB50E2458BD3500D2EEB5 /* Utility.swift */; };
 		8574D8FE245844A600303A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FD245844A600303A84 /* AppDelegate.swift */; };
-		8574D900245844A600303A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574D8FF245844A600303A84 /* SceneDelegate.swift */; };
 		8574D905245844A600303A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8574D903245844A600303A84 /* Main.storyboard */; };
 		8574D908245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8574D906245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld */; };
 		8574D90A245844A700303A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8574D909245844A700303A84 /* Assets.xcassets */; };
@@ -83,7 +82,6 @@
 		853BB50E2458BD3500D2EEB5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8574D8FA245844A600303A84 /* Jet2TravelAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jet2TravelAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8574D8FD245844A600303A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8574D8FF245844A600303A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8574D904245844A600303A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8574D907245844A600303A84 /* Jet2TravelAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jet2TravelAssignment.xcdatamodel; sourceTree = "<group>"; };
 		8574D909245844A700303A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				8574D8FD245844A600303A84 /* AppDelegate.swift */,
-				8574D8FF245844A600303A84 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -499,7 +496,6 @@
 				85C943C6245AC3BD00904800 /* Article+CoreDataModel.swift in Sources */,
 				853BB50F2458BD3500D2EEB5 /* Utility.swift in Sources */,
 				853BB4FD24589DFD00D2EEB5 /* RequestManager.swift in Sources */,
-				8574D900245844A600303A84 /* SceneDelegate.swift in Sources */,
 				853BB50924589F1800D2EEB5 /* Enum.swift in Sources */,
 				853BB50B24589F2E00D2EEB5 /* TypeAlias.swift in Sources */,
 				8574D908245844A600303A84 /* Jet2TravelAssignment.xcdatamodeld in Sources */,
@@ -686,7 +682,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Jet2TravelAssignment/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,7 +706,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Jet2TravelAssignment/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,20 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jet2 Travel Assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2E-Zl-j8B">
-                                <rect key="frame" x="113.5" y="437.5" width="187" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jet2 Travel Assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2E-Zl-j8B">
+                                <rect key="frame" x="37.5" y="423" width="339.5" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Ve3-mY-sJJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ve3-mY-sJJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="t2E-Zl-j8B" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="caP-A8-pFg"/>
-                            <constraint firstItem="t2E-Zl-j8B" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zo1-Wa-xNk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t2E-Zl-j8B" secondAttribute="trailing" constant="37" id="BPi-vd-ca7"/>
+                            <constraint firstItem="t2E-Zl-j8B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37.5" id="NMW-fn-paO"/>
+                            <constraint firstItem="t2E-Zl-j8B" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xWv-jL-bwZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

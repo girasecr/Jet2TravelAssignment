@@ -39,7 +39,11 @@ class ArticleViewController: UIViewController {
     }
     
     private func setupProcessIndicatorView() {
-        activityIndicatorView = UIActivityIndicatorView(style: .large)
+        if #available(iOS 13.0, *) {
+            activityIndicatorView = UIActivityIndicatorView(style: .large)
+        } else {
+            activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        }
         tableView.backgroundView = activityIndicatorView
         activityIndicatorView?.startAnimating()
     }

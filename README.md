@@ -4,6 +4,9 @@
 Xcode 11.3.1
 Swift 5.0
 
+# iOS Support
+iPhone, iPad and supports iOS 11 to iOS 13.2 latest
+
 # Architecture
 Used MVVM Architecture
 
